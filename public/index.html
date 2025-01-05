@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Chat - Reworked Ban Logic</title>
+</head>
+<body>
+  <h1>Chat with Local SQLite + Cookie Auth + Proper Ban</h1>
+
+  <!-- Current user -->
+  <p><strong>Current User:</strong> <span id="currentUser">Not logged in</span></p>
+
+  <div>
+    <h2>Register</h2>
+    <input id="regUsername" placeholder="Username" />
+    <input id="regPassword" placeholder="Password" type="password" />
+    <button onclick="registerUser()">Register</button>
+    <p id="regStatus"></p>
+  </div>
+
+  <div>
+    <h2>Login</h2>
+    <input id="loginUsername" placeholder="Username" />
+    <input id="loginPassword" placeholder="Password" type="password" />
+    <button onclick="loginUser()">Login</button>
+    <p id="loginStatus"></p>
+  </div>
+
+  <div>
+    <h2>Create Room</h2>
+    <input id="roomName" placeholder="Room Name" />
+    <label><input id="publicCheck" type="checkbox" checked /> Public?</label>
+    <label><input id="filterCheck" type="checkbox" /> Profanity Filter?</label>
+    <button onclick="createRoom()">Create Room</button>
+    <p id="createRoomStatus"></p>
+  </div>
+
+  <div>
+    <h2>Join/Leave Room</h2>
+    <input id="joinRoomId" placeholder="Room ID" />
+    <button onclick="joinRoom()">Join</button>
+    <button onclick="leaveRoom()">Leave</button>
+    <p id="joinStatus"></p>
+  </div>
+
+  <div>
+    <h2>Chat</h2>
+    <input id="chatMsg" placeholder="Message" />
+    <button onclick="sendMessage()">Send</button>
+    <ul id="messages"></ul>
+  </div>
+
+  <div>
+    <h2>Ban User (Owner only)</h2>
+    <input id="banUserId" placeholder="User ID to ban" />
+    <button onclick="banUser()">Ban</button>
+  </div>
+
+  <button onclick="logout()">Logout</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

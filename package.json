@@ -1,0 +1,24 @@
+{
+    "name": "my-sqlite-chat",
+    "version": "1.0.0",
+    "description": "Local Chat with SQLite, Express, Socket.IO, Profanity Filter, Registration, etc.",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "better-sqlite3": "^8.3.0",
+        "cookie-parser": "^1.4.7",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^8.5.1",
+        "node-fetch": "^2.6.9",
+        "socket.io": "^4.5.4",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
